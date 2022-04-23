@@ -1,0 +1,17 @@
+int Sd=0, Si=0, Sc=0;
+
+int Md=0, Mi=0; 
+
+int Ld=0, Li=0, Lf=0, Lb=0;
+
+void setup(){
+
+}
+
+void loop(){
+Sd=digitalRead();
+
+
+
+
+}
