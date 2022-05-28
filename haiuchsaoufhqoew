@@ -1,23 +1,83 @@
+// Sensor de ultrasonido
+long u_tiempo(int trigger_pin, int echo_pin) {
+  digitalWrite(trigger_pin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigger_pin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigger_pin, LOW);
+  long microseconds = pulseIn(echo_pin , HIGH);
+  return microseconds;
+}
+
+long u_distancia(int trigger_pin, int echo_pin) {
+  long microseconds = u_tiempo(trigger_pin, echo_pin);
+  long u_distancia;
+  u_distancia = microseconds / 29 / 2;
+  if (u_distancia == 0) {
+    u_distancia = 999;
+  }
+  return u_distancia;
+}
+
+
 int Sd=0, Si=0, Sc=0;
 
-int Md=0, Mi=0; 
+constant int Md=0, Mi=0; 
 
-int Ld=0, Li=0, Lf=0, Lb=0;                      //<  >
+//int Ld=0, Li=0, Lf=0, Lb=0;                      //<  >
 
 void setup(){
 pinMode(Md,OUTPUT);
 pinMode(Mi,OUTPUT);
+Serial.begin(9600);
 }
 
 void loop(){
-Sd=digitalRead();
-Si=digitalRead();
-Sc=digitalRead();
+  Sd = u_distancia(12, 13);    //(Trigger, Echo)
+  if(Sd>200){Sd=0;}
+  Serial.print("D: ");
+  Serial.print(Sd);
+  Serial.print("   ");
+  
+  Sc = u_distancia(10, 11);
+  if(Sc>200){Sc=0;}
+  Serial.print("C: ");
+  Serial.print(Sc);
+  Serial.print("   ");
+  
+  Si = u_distancia(8, 9);
+  if(Si>200){Si=0;}
+  Serial.print("I: ");
+  Serial.print(Si);
+  Serial.print("   ");
+  Serial.println("");
+  
 
-if (Sd>20){
-
-
-}
+else if ((Sd <= 50) && (Sd >= 1)) {
+   digitalWrite(Mi, LOW);
+   digitalWrite(Md, HIGH);
+    Serial.println("Derecha");
+  }
+  
+  
+else if ((Sc <= 50) && (Sc >= 1)) {
+   digitalWrite(Md, HIGH);
+   digitalWrite(Mi, HIGH);
+    Serial.println("Centro");
+  }
+  
+ 
+ else if ((Si <= 50) && (Si >= 1)) {
+    digitalWrite(Mi, HIGH);
+    digitalWrite(Md, LOW);
+    Serial.println(" Izquierda");
+  }
+   
+ else {
+    digitalWrite(Mi, HIGH);
+    digitalWrite(Md, LOW);
+    Serial.println("buscando");
+  }
 
 
 
