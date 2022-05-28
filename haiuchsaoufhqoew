@@ -2,15 +2,22 @@ int Sd=0, Si=0, Sc=0;
 
 int Md=0, Mi=0; 
 
-int Ld=0, Li=0, Lf=0, Lb=0;
+int Ld=0, Li=0, Lf=0, Lb=0;                      //<  >
 
 void setup(){
-
+pinMode(Md,OUTPUT);
+pinMode(Mi,OUTPUT);
 }
 
 void loop(){
 Sd=digitalRead();
+Si=digitalRead();
+Sc=digitalRead();
 
+if (Sd>20){
+
+
+}
 
 
 
