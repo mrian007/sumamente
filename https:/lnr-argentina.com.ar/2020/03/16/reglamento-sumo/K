@@ -1,0 +1,32 @@
+b) Tipo de Robots
+
+Las dimensiones de los Robots deberán ser:
+Sumo: 20cm x 20cm sin límite de altura, 3kg máximo
+Mini Sumo: 10cm x 10cm sin límite de altura, 500gr máximo
+No se permite diseñar el Robot que cuando empiece el juego o durante el combate se separe en diferentes partes entendiéndose por esto soltar piezas señuelos o convertir el móvil en, al menos, dos autómatas; el Robot que lo haga, perderá el combate.
+Está permitido desplegar estructuras una vez iniciado el combate, siempre y cuando el robot se mantenga en una sola pieza.
+Los robots deben ser completamente autónomos.
+Las medidas no tienen tolerancia.
+No se podrá operar directamente sobre los robots una vez comenzada la prueba.
+Se podrán utilizar para la parte de control cualquier tipo de elemento electrónico básico (compuertas, transistores, operacionales, etc.), también está permitido el uso de microcontroladores, y microprocesadores.
+Los únicos elementos permitidos para realizar la parte motriz del robot sobre el Ring serán motores eléctricos y la alimentación de estos será por baterías.
+Se permitirá el cambio de las baterías durante la competencia siempre y cuando no alteren la forma y peso del robot de manera significativa.
+Se permitirá durante toda la competencia el uso de varias baterías o baterías recargables.
+En caso de que se decida utilizar baterías recargables, el equipo contará con la posibilidad de recargar la misma cuando el robot no esté en competencia, debiendo tener cada equipo su propia fuente de carga.
+Deberán diseñarse de forma que comiencen a moverse una vez pasados 5 segundos desde la activación, este tiempo se lo llamará tiempo de seguridad
+Durante el tiempo de seguridad no está permitido ningún tipo de movimiento en el robot y/o despliegue de piezas, sin importar que supere o no las dimensiones máximas permitidas.
+El encendido debe ser mediante un mando inalámbrico provisto por el participante, solo en caso de fuerza mayor el robot se encenderá de manera manual.
+El robot deberá contar con un led indicador que se indique que el robot fue activado e indique que inicio el tiempo de seguridad.
+El robot no puede cambiar o variar su estructura durante toda la competencia, salvo casos de fuerza mayor donde los jueces deben aprobar los cambios realizados.
+c) Descalificación del combate
+
+Cualquier Robot que no cumpla con las especificaciones para su categoría queda automáticamente descalificado de la competencia.
+
+4)    Zona de Competencia
+
+Entendemos por área de combate una tarima de juego (Ring) y el área exterior.
+El ring será circular, de color negro, y situado a una altura D respecto al suelo.
+Señalando el límite del Ring, habrá una línea blanca circular de N de ancho.
+En el centro del Ring habrá dos líneas paralelas de color negro o gris oscuro, llamadas líneas Shikiri a una distancia de C entre las mismas.
+La tolerancia de todas las medidas indicadas anteriormente será del ±5%.
+El área exterior estará formada como mínimo por un cuadrado de G de lado. Esta área estará vacía de cualquier obstáculo durante los combates y puede ser de cualquier color excepto blanco.
