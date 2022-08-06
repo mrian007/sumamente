@@ -22,11 +22,11 @@ long u_distancia(int trigger_pin, int echo_pin) {
 int on=0;
 
 int Sd=0, Sc=0, Si=0;
-int echoSd=0, echoSc=0, echoSi=0;
-int tigerSd=0, tigerSc=0, tigerSi=0;
+int echoSd=6, echoSc=8, echoSi=10;
+int tigerSd=7, tigerSc=9, tigerSi=11;
 
- int Md1=0, Md2=0; 
- int Mi1=0, Mi2=0; 
+ int Md1=2, Md2=3; 
+ int Mi1=4, Mi2=5; 
 
 //int Ld=0, Li=0, Lf=0, Lb=0;                      //<  >
 
@@ -43,7 +43,7 @@ pinMode(13,OUTPUT);
 }
 
 void loop(){
-if  (digitalRead(12)>0){delay(4991);on=1} else {on=0}
+if  (digitalRead(12)>0){delay(4991);on=1;} else {on=0;}
 
 if(on=1){
   digitalWrite(13,HIGH);
@@ -98,8 +98,11 @@ else if ((Sc <= 50) && (Sc >= 1)) {
   }
    
  else {
-    digitalWrite(Mi, HIGH);
-    digitalWrite(Md, LOW);
+  digitalWrite(Md1, HIGH);
+   digitalWrite(Md2, LOW);
+   
+   digitalWrite(Mi1, LOW);
+   digitalWrite(Mi2, HIGH);
     Serial.println("buscando");
   }
 
